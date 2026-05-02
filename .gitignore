@@ -1,0 +1,5 @@
+.playwright-mcp/
+pax-initial.png
+pax-v2.png
+node_modules/
+*.log
