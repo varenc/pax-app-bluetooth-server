@@ -27,7 +27,8 @@ another device on your network you'll need to run it behind TLS — set
   the `/api/v1` endpoints the app calls.
 - `local-app/overrides.css` / `overrides.js` — UI cleanup: hides the top nav
   and end-of-life banner, auto-declines the usage-data consent modal so the
-  app actually mounts.
+  app actually mounts. Also blocks outbound telemetry (Bugsnag, Google Tag
+  Manager) at the `fetch`/`XHR`/`<script src>` layer.
 
 ## Caveats
 
