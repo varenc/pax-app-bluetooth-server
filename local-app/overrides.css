@@ -1,0 +1,14 @@
+/* Hide cruft we don't want in the self-hosted version. */
+
+/* Top header — PAX logo + DEVICE/EXPLORE/ACCOUNT/FAQ nav.
+   styled-components hashes are stable per build of main.54fae5f0.js. */
+.sc-kLsvkR.cWaVMm { display: none !important; }
+
+/* Banner area in <main> that hosts the EOL / "servers busy" / etc. flash banners.
+   The wrapper renders empty space when the inner banner is hidden, so hide both. */
+.sc-gHTqzY.evYfex { display: none !important; }
+.sc-jrAFXE.sc-jCcQjt { display: none !important; }
+
+/* Reclaim the vertical space the hidden header used. */
+main.sc-hgxWJO { padding-top: 24px !important; }
+
