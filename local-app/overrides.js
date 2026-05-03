@@ -78,3 +78,13 @@
   // Stop observing after 30s — these modals only appear at startup.
   setTimeout(() => obs.disconnect(), 30000);
 })();
+
+// Pod switcher relies on PAX backend pod data we don't have. Intercept clicks
+// in the capture phase so React never sees them, and tell the user.
+document.addEventListener('click', e => {
+  const target = e.target instanceof Element && e.target.closest('[data-testid="pod-switcher"]');
+  if (!target) return;
+  e.stopPropagation();
+  e.preventDefault();
+  alert('Pod switcher is not supported in the self-hosted version (no PAX backend pod data).');
+}, true);
